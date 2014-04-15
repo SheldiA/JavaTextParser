@@ -5,6 +5,7 @@
  */
 
 package by.epam.lw03.parser;
+import by.epam.lw03.Functianality.SearchUniqueWord;
 import by.epam.lw03.Functianality.SwapingFirstLast;
 import by.epam.lw03.IO.FileParserReader;
 import by.epam.lw03.IO.FileParserWriter;
@@ -27,6 +28,8 @@ public class Parser {
     public static void main(String[] args) throws Exception {
         FileParserReader fpr = new FileParserReader("D:\\MyProjects\\ProjectsJava\\Parser\\files\\1.txt");
         Text text = fpr.read();
+        SearchUniqueWord suw = new SearchUniqueWord();
+        System.out.println(suw.applyFunctianality(text));
         SwapingFirstLast sfl = new SwapingFirstLast();
         text = sfl.applyFunctianality(text);
         FileParserWriter fpw = new FileParserWriter("D:\\MyProjects\\ProjectsJava\\Parser\\files\\2.txt");
